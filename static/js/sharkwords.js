@@ -13,7 +13,7 @@ let numWrong = 0;
 const createDivsForChars = (word) => {
   // Replace this with your code
 
-  for (let letter in word) {
+  for (let letter of word) {
     $('#word-container').append(`<div class="letter-box ${letter}"></div>`);
   }
 };
@@ -45,6 +45,7 @@ const disableLetterButton = (buttonEl) => {
 //
 const isLetterInWord = (letter) => {
   // Replace this with your code
+  return $(`div.${letter}`)[0] !== undefined;
 };
 
 
@@ -52,6 +53,8 @@ const isLetterInWord = (letter) => {
 //
 const handleCorrectGuess = (letter) => {
   // Replace this with your code
+
+
 };
 
 
